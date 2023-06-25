@@ -1,6 +1,6 @@
 
 const admin = require('../model/index');
-const {sendOtp} = require('../utils/smsProvider')
+const {sentOtp} = require('../utils/smsProvider')
 exports.sendOtp = async (req, res) => {
     try {
 
@@ -11,7 +11,7 @@ exports.sendOtp = async (req, res) => {
             otp: otp,
             timestamp: Date.now()
         })
-        await sendOtp(phoneNumber,otp)
+        sentOtp(phoneNumber,otp)
         console.log("otp", otp);
         res.status(200).send({
             message: "OTP sent successfully",
