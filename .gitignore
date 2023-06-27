@@ -1,5 +1,7 @@
-node_modules/
 
+# Ignore .env file
 .env
-
 durable-melody-373211-firebase-adminsdk-bocr7-14fe2de9a8.json
+# Ignore logs directory
+node_modules/
+# Ignore build artifacts
